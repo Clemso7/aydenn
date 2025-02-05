@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="main-container">
+    <nav aria-label="breadcrumb" role="navigation" class="bg-primary text-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Accueil</a>
+              </li>
+              <!--<li class="breadcrumb-item"><a href="pages-inner.html">Inner Pages</a>
+              </li>-->
+              <li class="breadcrumb-item active" aria-current="page">Mission</li>
+            </ol>
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </nav>
+    <section>
+      <div class="container">
+        <div class="row justify-content-center text-center section-intro">
+          <!--<div class="col-12 col-md-9 col-lg-8">-->
+            <span class="title-decorative" data-aos="fade-up" data-aos-delay="10">Notre Mission</span>
+            <h2 class="display-4" data-aos="fade-up" data-aos-delay="100">Offrir le meilleur service de placement et de recrutement de personnel</h2>
+            <!--<span class="lead" data-aos="fade-up" data-aos-delay="200">An opportunity to introduce the major benefits of your product and set the scene for what's to come</span>-->
+            <div class="row justify-content-center">
+            
+            <figure class="figure">
+                <img alt="Image" src="{% static 'images/content/entreprise.jpg' %}" />
+              </figure>
+          <!--</div>-->
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+
+      </div>
+      <!--end of container-->
+      <article class="container">
+        <div class="row justify-content-center">
+          <!--<div class="col-12 col-lg-10">
+            <figure class="figure">
+              <img alt="Image" src="{% static 'images/content/entreprise.jpg' %}" />
+            </figure>
+          </div>-->
+          <!--end of col-->
+          <!--<div class="col-12 col-md-8 col-lg-6">-->
+            <!--<blockquote class="blockquote">
+              <p class="h4">
+                “When consistency is built-in, there’s no arguing about insignificant details.”
+              </p>
+              <footer class="blockquote-footer title-decorative">
+                Rob Tobin, CEO
+              </footer>
+            </blockquote> -->
+            <p class="lead">Comme agence de placement de personnel, notre mission est de faciliter la rencontre entre les talents exceptionnels et les entreprises prospères.</p>
+            <p class="lead">Notre philosophie qui repose sur l’efficacité de nos services est ainsi de répondre aux besoins de main d’œuvre qui sévit partout au Canada.</p>
+            <p class="lead">Pour ce faire, nous recrutons des candidats tant au Canada qu’à l’international. Ayden.n.placement est enregistré au Québec sous le numéro NEQ 1179092995.</p>
+            <br/>
+            <h3 ><strong>Aux employeurs</strong></h3>
+            <p class="lead">Nos offres de services comprennent la recherche de candidats et l’évaluation de leur potentiel, le recrutement, l'offre des candidats pour votre approbation, la coordination des entrevues et la négociation d'offre, ainsi que des vérifications des antécédents criminels et des références (à la demande du client).
+            <p class="lead">Des solutions de recrutement sur mesure, adaptées à vos besoins spécifiques, placement permanent et recrutement temporaire.</p>			
+            <p class="lead">Besoin de trouver rapidement une personne pour remplacer un salarié absent ou pour compléter momentanément votre équipe, et faire face à un surcroît de tâches? Nous pouvons vous proposer le candidat idéal pour répondre à vos besoins à court, moyen et à long terme.</p>
+            <br/>
+            <h3 ><strong>Aux candidats</strong></h3>
+            <p class="lead"> Pour des emplois disponibles sur le site, postulez en ligne ou envoyez-nous votre cv. Ayden.n.placement  a des exigences précis pour recruter le candidat idéal.</p>
+            <p class="lead">Aucun affichage de poste ne correspond à ce que vous recherchez ? Pas de soucis, vous pouvez soumettre une candidature générale en postulant en ligne.</p>
+            <p class="lead">Votre CV sera conservé dans notre base de données, et nous vous contacterons dès qu’un poste correspondant à votre profil sera disponible.</p>
+            <p class="lead">Envoyez-nous votre CV à recrutement@aydennplacement.ca </p>
+            <br/>
+          <!--</div>-->
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+      </article>
+      <!--end of container-->
+    <!--</section>
+    <section class="flush-with-above">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-auto">
+            <h4>Meet our crew of makers</h4>
+          </div>
+        </div>
+        <div class="row no-gutters justify-content-center">
+          <div class="col-12 col-lg-10">
+            <ul class="feature-list row justify-content-center">
+
+              <li class="col-6 col-lg-4">
+                <img alt="Image" src="assets/img/photo-team-female-1.jpg" class="img-fluid rounded mb-3" />
+                <h5 class="mb-0">Dollie Lewis</h5>
+                <span>Co-Founder and CEO</span>
+                <ul class="list-inline list-links mt-2">
+                  <li class="list-inline-item"><a href="#"><i class="socicon-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-linkedin"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-dribbble"></i></a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="col-6 col-lg-4">
+                <img alt="Image" src="assets/img/photo-team-male-1.jpg" class="img-fluid rounded mb-3" />
+                <h5 class="mb-0">Marcus Freeman</h5>
+                <span>Co-Founder and CTO</span>
+                <ul class="list-inline list-links mt-2">
+                  <li class="list-inline-item"><a href="#"><i class="socicon-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-linkedin"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-dribbble"></i></a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="col-6 col-lg-4">
+                <img alt="Image" src="assets/img/photo-team-male-2.jpg" class="img-fluid rounded mb-3" />
+                <h5 class="mb-0">Ronnie Greene</h5>
+                <span>Product Design</span>
+                <ul class="list-inline list-links mt-2">
+                  <li class="list-inline-item"><a href="#"><i class="socicon-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-linkedin"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-dribbble"></i></a>
+                  </li>
+                </ul>
+              </li>
+
+              
+              <li class="col-6 col-lg-4">
+                <img alt="Image" src="assets/img/photo-team-female-3.jpg" class="img-fluid rounded mb-3" />
+                <h5 class="mb-0">Florence Romero</h5>
+                <span>Customer Relations</span>
+                <ul class="list-inline list-links mt-2">
+                  <li class="list-inline-item"><a href="#"><i class="socicon-twitter"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-linkedin"></i></a>
+                  </li>
+                  <li class="list-inline-item"><a href="#"><i class="socicon-dribbble"></i></a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <div class="row justify-content-center text-center section-outro">
+          <div class="col-lg-4 col-md-5">
+            <h6>Interested in joining the crew?</h6>
+            <p>We're always on the hunt for talented designers and developers to join our team</p>
+            <a href="#">See current openings &rsaquo;</a>
+          </div>
+        </div>
+      </div>
+    </section>-->
+</div>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+   
+    <div class="main-container">
+      <section class="height-100 bg-dark">
+        <div class="container">
+          <div class="row">
+            <div class="col text-center">
+              <i class="icon-compass display-4"></i>
+              <h1 class="h2">Oh ooh, page non trouvé (404)</h1>
+              <span>La page que vous cherchez ne peut-etre trouvée. <a href="{% url 'home' %}" class="text-white">Retour à l'accueil</a></span>
+            </div>
+            <!--end of col-->
+          </div>
+          <!--end of row-->
+        </div>
+      </section>
+    </div>
+    {% endblock content %}

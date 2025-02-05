@@ -1,0 +1,205 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% load i18n %}
+
+<!-- /.beginning -->
+
+
+  <div class="clear"></div>
+
+  <div class="container_12">
+    <div class="grid_12">
+        <div class="slidprev"><span>Prev</span></div>
+        <div class="slidnext"><span>Next</span></div>
+              
+        <div id="slider">
+         <div class="slide">
+            <img src="{% static 'images/content/quebec.jpg' %}" alt="" title="" />
+            <div class="slid_text">
+              <h3 class="slid_title"><span>Travailler au Quebec</span></h3>
+              <p><span>Vous souhaitez travailler dans l'une des économies les plus</span></p>
+              <p><span>dynamiques de la planete</span></p>
+              <p><span>Nous vous aidons à rencontrer les employeurs qui recrutent</span></p>
+            </div>
+          </div>
+
+         <div class="slide">
+            <img src="{% static 'images/content/sante.jpg' %}" alt="" title="" />
+            <div class="slid_text">
+              <h3 class="slid_title"><span>Emplois techniques</span></h3>
+              <p><span>Besoin d'ingenieurs, d'informaticiens, d'infirmières...</span></p>
+              <p><span>Nous sommes là pour vous trouver des talents hautement qualifiés</span></p>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="{% static 'images/content/chantier.jpg' %}" alt="" title="" />
+            <div class="slid_text">
+              <h3 class="slid_title"><span>Emplois manuels</span></h3>
+              <p><span>Que ce soit pour des travailleurs en entrepot, en usine ou sur chantier</span></p> 
+              <p><span></span></p>
+            </div>
+          </div>
+        </div><!-- .slider -->
+        <div class="clear"></div>
+        
+        <div id="myController">
+          <div class="control"><span>1</span></div>
+          <div class="control"><span>2</span></div>
+          <div class="control"><span>3</span></div>
+        </div>
+        
+    </div><!-- .grid_12 -->
+  </div><!-- .container_12 -->
+
+  <div class="clear"></div>
+
+  <section id="main" class="home">
+    <div class="container_12">
+      <!--<div id="top_button">
+        <div class="grid_4">
+          <a href="#" class="button_block best_price">
+            <img src="{% static 'images/banner1.png' }" alt="Banner 1"/>
+          </a>
+        </div>
+
+        <div class="grid_4">
+          <a href="#" class="button_block new_smells">
+            <img src="{% static 'images/banner2.png' }" alt="Banner 2"/>
+          </a>
+        </div>
+
+        <div class="grid_4">
+          <a href="#" class="button_block only_natural">
+            <img src="{% static 'images/banner3.png' }" alt="Banner 3"/>
+          </a>
+        </div>
+
+        <div class="clear"></div>
+      </div> -->
+
+      <div class="clear"></div>
+
+      <!--Affichage emploi
+      <div class="carousel">
+        <div class="c_header">
+          <div class="grid_10">
+            <h2>Nouveaux emplois</h2>
+          </div>
+
+          <div class="grid_2">
+            <a id="next_c1" class="next arows" href="#"><span>Next</span></a>
+            <a id="prev_c1" class="prev arows" href="#"><span>Prev</span></a>
+           </div>
+        </div>
+
+        <div class="list_carousel">
+
+        <ul id="list_product" class="list_product">
+          <li class="">
+            <div class="grid_3 product">
+              <div class="prev">
+                <a href="/product_page.html"><img src="{% static 'images/infirmiere.jpg' %}" alt="" title="" /></a>
+              </div>
+              <h3 class="title">Poste: <a>Infirmier</a></h3>
+              <div class="vert">
+                <h3 class="title">Publiée le: <a>10 Janv 2024</a></h3> 
+              </div>
+            </div>
+          </li>
+
+          <li class="">
+            <div class="grid_3 product">
+              <div class="prev">
+                <a href="/product_page.html"><img src="{% static 'images/informaticien.jpg' %}" alt="" title="" /></a>
+              </div>
+              <h3 class="title">Poste: <a>Informaticien</a></h3>
+              <div class="vert">
+                <h3 class="title">Publiée le: <a>10 Janv 2024</a></h3> 
+              </div>
+            </div>
+          </li>
+
+          <li class="">
+            <div class="grid_3 product">
+              <div class="prev">
+                <a href="/product_page.html"><img src="{% static 'images/ingenieur.jpg' %}" alt="" title="" /></a>
+              </div>
+              <h3 class="title">Poste: <a>Ingenieur</a></h3>
+              <div class="vert">
+                <h3 class="title">Publiée le: <a>10 Janv 2024</a></h3> 
+              </div>
+            </div>
+          </li>
+
+          <li class="">
+            <div class="grid_3 product">
+              <div class="prev">
+                <a href="/product_page.html"><img src="{% static 'images/infirmiere.jpg' %}" alt="" title="" /></a>
+              </div>
+              <h3 class="title">Poste: <a>Infirmier</a></h3>
+              <div class="vert">
+                <h3 class="title">Publiée le: <a>10 Janv 2024</a></h3> 
+              </div>
+            </div>
+          </li>
+
+          <li class="">
+            <div class="grid_3 product">
+              <div class="prev">
+                <a href="/product_page.html"><img src="{% static 'images/informaticien.png' %}" alt="" title="" /></a>
+              </div>
+              <h3 class="title">Poste: <a>Informaticien</a></h3>
+              <div class="vert">
+                <h3 class="title">Publiée le: <a>10 Janv 2024</a></h3> 
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        </div>
+      </div>
+      Affichage emploi-->
+
+      <div id="content_bottom">
+        <div class="grid_4">
+          <div class="bottom_block about_as">
+            <h3>A propos de nous</h3>
+            <p>Ayden.n.placement est une agence de recrutement de personnel basée au Québec.</p>
+            <p>Elle est spécialisée dans la recherche, le recrutement et le placement de personnel hautement qualifié, soit temporaire ou permanent pour répondre aux besoins de divers employeurs canadiens en général, et plus particulièrement québécois.</p>
+            <p>Ayden.n.placement est enregistré au Québec sous le numéro NEQ 1179092995</p>
+          </div><!-- .about_as -->
+        </div><!-- .grid_4 -->
+
+        <div class="grid_4">
+          <div class="bottom_block news">
+            <h3>Aux employeurs</h3>
+            <p>Nos offres de services comprennent la recherche de candidats et l’évaluation de leur potentiel, 
+              le recrutement, l'offre des candidats pour votre approbation, la coordination des entrevues et la négociation d'offre, ainsi que des vérifications des antécédents criminels et des références (à la demande du client).</p>
+            <p>Des services de recherche contingente et retenue sont disponibles, placement permanent et recrutement temporaire.</p>
+          </div><!-- .news -->
+        </div><!-- .grid_4 -->
+
+        <div class="grid_4">
+          <div class="bottom_block newsletter">
+            <h3>Aux candidats</h3>
+            <p>Pour des emplois disponibles sur le site, postulez en ligne ou envoyez-nous votre cv.</p>
+            <p>Aucun affichage de poste ne correspond à ce que vous recherchez, Pas de soucis, vous pouvez soumettre une candidature générale en Postulant en ligne.</p>
+            <p>Votre CV sera conservé dans notre base de données, et nous vous contacterons dès qu’un poste correspondant à votre profil est disponible.</p>
+            <p>Envoyez-nous votre CV à simplicetsafack@yahoo.fr </p>
+          </div><!-- .newsletter -->
+        </div><!-- .grid_4 -->
+
+        <div class="clear"></div>
+      </div><!-- #content_bottom -->
+      <div class="clear"></div>
+
+    </div><!-- .container_12 -->
+  </section><!-- #main -->
+
+  <div class="clear"></div>
+</body>
+  
+
+{% endblock content %}

@@ -1,0 +1,100 @@
+{% load static %}
+<footer class="bg-gray text-light footer-long">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-3">
+          <img alt="Image" src="{% static 'images/aydennlogo3n.png' %}" class="mb-4" /> 
+          <p class="text-muted">
+            &copy; Aydenn, 2023  
+            <br/>Developped by Ganemtore            
+          </p>
+        </div>
+        <!--end of col-->
+        <div class="col-12 col-md-9">
+          <span class="h5">Notre mission : Offrir le meilleur service de recrutement à l'étranger</span>
+          <div class="row no-gutters">
+            <div class="col-6 col-lg-3">
+              <h6>Service client</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="{% url 'contact' %}">Contact</a>
+                </li>
+                <!-- <li>
+                  <a href="pages-landing.html">Landing Pages</a>
+                </li> -->
+              </ul>
+            </div>
+            <!--end of col-->
+            <div class="col-6 col-lg-3">
+              <h6>Entreprise</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="{% url 'mission' %}">Missions</a>
+                </li>
+                <!-- <li>
+                  <a href="#">Android &amp; Chrome OS</a>
+                </li> -->
+              </ul>
+            </div>
+            <!--end of col-->
+            <div class="col-6 col-lg-3">
+              <h6>Autres liens</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="{% url 'confidentialite' %}">Politique de confidentialité</a>
+                </li>
+                <!-- <li>
+                  <a href="#">Knowledgebase</a>
+                </li> -->
+              </ul>
+            </div>
+            <!--end of col-->
+            <div class="col-6 col-lg-3">
+              <h6>Contacts</h6>
+              <ul class="list-unstyled">
+                <li>
+                  <p>Téléphone: <span>(514) 627-6541 </span><br/>
+                </li>
+                <!-- <li>
+                  <a href="#">Knowledgebase</a>
+                </li> -->
+              </ul>
+            </div>
+          </div>
+          <!--end of row-->
+        </div>
+        <!--end of col-->
+      </div>
+      <!--end of row-->
+    </div>
+    <!--end of container-->
+  </footer>
+
+
+  <!-- Required vendor scripts (Do not remove) -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/popper.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/bootstrap.js' %}"></script>
+
+  <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
+  <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
+  <script type="text/javascript" src="{% static 'assets/js/aos.js' %}"></script>
+  <!-- Flatpickr (calendar/date/time picker UI) -->
+  <script type="text/javascript" src="{% static 'assets/js/flatpickr.min.js' %}"></script>
+  <!-- Flickity (handles touch enabled carousels and sliders) -->
+  <script type="text/javascript" src="{% static 'assets/js/flickity.pkgd.min.js' %}"></script>
+  <!-- jarallax (parallax effect and video backgrounds) -->
+  <script type="text/javascript" src="{% static 'assets/js/jarallax.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/jarallax-video.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/jarallax-element.min.js' %}"></script>
+  <!-- ScrollMonitor (manages events for elements scrolling in and out of view) -->
+  <script type="text/javascript" src="{% static 'assets/js/scrollMonitor.js' %}"></script>
+  <!-- jQuery smartWizard facilitates steppable wizard content -->
+  <script type="text/javascript" src="{% static 'assets/js/jquery.smartWizard.min.js' %}"></script>
+  <!-- Smooth scroll (animation to links in-page)-->
+  <script type="text/javascript" src="{% static 'assets/js/smooth-scroll.polyfills.min.js' %}"></script>
+  <!-- Prism (displays formatted code boxes) -->
+  <script type="text/javascript" src="{% static 'assets/js/prism.js' %}"></script>
+  <script type="text/javascript" src="{% static 'assets/js/zoom.min.js' %}"></script>
+  <!-- Required theme scripts (Do not remove) -->
+  <script type="text/javascript" src="{% static 'assets/js/theme.js' %}"></script>

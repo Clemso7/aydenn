@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="main-container">
+    <nav aria-label="breadcrumb" role="navigation" class="bg-primary text-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Accueil</a>
+              </li>
+              <li class="breadcrumb-item active" aria-current="page">Emplois</li>
+            </ol>
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </nav>
+    <section>
+      <div class="container">
+        <div class="row justify-content-center text-center section-intro">
+          <div class="col-12 col-md-9 col-lg-8">
+            <span class="title-decorative" data-aos="fade-up" data-aos-delay="10">Travailler avec nous</span>
+            <h2 class="display-4" data-aos="fade-up" data-aos-delay="100">Emplois disponibles</h2>
+            <span class="lead" data-aos="fade-up" data-aos-delay="200">Pour postuler, veuillez cliquer sur le poste pour en prendre connaissance et nous écrire en précisant son identifiant</span>
+
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+        
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-10">
+            
+            <div class="card mb-5">
+              <ul class="list-group list-group-lg list-group-flush">
+                {% for job in jobs %}
+                {% if job %}
+                <li class="list-group-item d-flex justify-content-between">
+                  <a href="{% url 'jobs-details' job.id %}">{{job.job_title}}, {{job.reference}}</a>
+                  <span>{{job.job_type}}, {{job.job_type2}}</span>
+                </li>
+                
+                {% endif %}
+                {% empty %}
+                <div class="row justify-content-center text-center section-intro">
+                    <div class="col-12 col-md-9 col-lg-8">
+                      <span class="display-4" data-aos="fade-up" data-aos-delay="10">Aucun emploi disponible pour l'instant</span>
+                    </div>
+                    <!--end of col-->
+                  </div>
+                {% endfor %}
+              </ul>
+            </div>
+            <nav aria-label="...">
+                <ul class="pagination">
+                  {% if jobs.has_previous %}
+                    <li class="page-item"><a class="page-link" href="?page=1">&laquo; première</a></a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ jobs.previous_page_number }}">précédente</a></li>
+                  {% endif %}
+                    <li class="page-item active" aria-current="page">
+                      <span class="page-link">Page {{ jobs.number }} of {{ jobs.paginator.num_pages }}.</span>
+                    </li>
+                  {% if jobs.has_next %}
+                    <li class="page-item"><a class="page-link" href="?page={{ jobs.next_page_number }}">prochaine</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ jobs.paginator.num_pages }}">dernière &raquo;</a></li>
+                  {% endif %}
+                </ul>
+              </nav>
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+        <div class="row justify-content-center text-center section-outro">
+          <div class="col-lg-4 col-md-5">
+            <h6>Notre courriel pour postuler à nos emplois : recrutement@aydennplacement.ca</h6>
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+    <!--end of section-->
+</div>
+{% endblock content %}

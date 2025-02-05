@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="main-container">
+    <nav aria-label="breadcrumb" role="navigation" class="bg-primary text-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Accueil</a>
+              </li>
+              <li class="breadcrumb-item"><a href="{% url 'jobs' %}">Emplois</a>
+              </li>
+
+              <li class="breadcrumb-item active" aria-current="page">{{job.job_title}}</li>
+            </ol>
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </nav>
+    <section class="bg-white space-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h1>{{job.job_title}}</h1>
+            <span class="lead">{{job.job_type2}}</span>
+            <!--<a href="#" class="btn btn-success">Apply now</a> -->
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+    <!--end of section-->
+    <section>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-12 col-md-8 col-lg-7">
+            <article>
+              <h5>Description du poste</h5>
+              <p>
+                {% autoescape off %}
+                {{job.description}}
+                {% endautoescape %}
+              </p>
+             
+              <h5>Responsibilités</h5>
+              <ul>
+                <li>
+                  {% autoescape off %}
+                  {{job.responsabilities}}
+                  {% endautoescape %}
+                </li>
+                
+              </ul>
+              <h5>Qualifications</h5>
+              <ul>
+                <li>
+                  {% autoescape off %}
+                  {{job.qualifications}}
+                  {% endautoescape %}
+                </li>
+                
+            </article>
+            <hr>
+            <small>
+             Pour postuler à cet emploi, veuiller nous écrire à : recrutement@aydennplacement.ca.
+             Veuillez indiquer l'identifiant du poste, sans oublier de joindre votre CV et une lettre de motivation.
+            </small>
+            <hr>
+            <!--<h5 class="mb-4">Sound like the job for you?</h5>
+            <form class="d-flex justify-content-between align-items-center">
+              <div>
+                <a href="#" class="btn btn-success">Apply now</a>
+              </div>
+              <div>
+                <a href="#">Back to careers</a>
+              </div>
+            </form>-->
+          </div>
+          <!--end of col-->
+          <div class="col-12 col-md-4">
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div><<i class="icon-person-bounding-box mr-1"></i> Identifiant</div> 
+                    <span>{{job.reference}}</span>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div><i class="icon-home mr-1"></i> Localisation</div>
+                    <span>{{job.entreprise_location}}, QC</span>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">
+                      <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022ZM6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z"/>
+                      <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm0-2h1v1h-1z"/>
+                    </svg>   Type </div>
+                    <span>{{job.job_type}}</span>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-dollar" viewBox="0 0 16 16">
+                      <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718H4zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73l.348.086z"/>
+                    </svg>   Contrat</div>
+                    <span>{{job.job_duration}}</span>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <div><i class="icon-stopwatch mr-1"></i>Horaires</div>
+                    <span>{{job.job_type2}}</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card">
+              <div class="card-header d-flex justify-content-between">
+                <div>
+                  <span class="h6">Délai pour postuler :</span>                
+                </div>
+                <a href="#">{{job.deadline}} </a>
+              </div>
+              <!--<div class="card-body">
+                <ul class="list-unstyled list-spacing-sm">
+                  <li>
+                    <i class="icon-text-document text-muted mr-1"></i>
+                    <a href="#">Setting up API end-points</a>
+                  </li>
+                  <li>
+                    <i class="icon-text-document text-muted mr-1"></i>
+                    <a href="#">Importing contacts via CSV</a>
+                  </li>
+                  <li>
+                    <i class="icon-text-document text-muted mr-1"></i>
+                    <a href="#">Integrating your Gulp workflow</a>
+                  </li>
+                  <li>
+                    <i class="icon-text-document text-muted mr-1"></i>
+                    <a href="#">Forking a repo</a>
+                  </li>
+                </ul>
+              </div>-->
+            </div>
+            <!--end of card-->
+            <div class="card">
+              <div class="card-header">
+                <span class="h6">Publié le {{job.published_date|date:"D d M Y"}}</span>
+              </div>
+            </div>
+          </div>
+          <!--end of col-->
+        </div>
+        <!--end of row-->
+      </div>
+      <!--end of container-->
+    </section>
+    <!--end of section-->
+</div>
+{% endblock content %}
