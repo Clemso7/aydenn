@@ -1,1 +1,1 @@
-Web site for Montreal recruitmrnt agency built with Django framework
+Web site for Montreal recruitment agency built with Django framework
